@@ -370,7 +370,7 @@ ol.steps li.fix.now::before, ol.steps li.fix.done::before{background:var(--go); 
       warn:'Řada aplikací postavených v Lovable do dubna 2025 měla kvůli chybějícím zámkům data otevřená komukoli, včetně osobních údajů a API klíčů (CVE-2025-48757).' },
     { id:'rozvody', name:'Rozvody', title:'Rozvody: co se stane po kliknutí', tag:'logika, backend',
       lead:'Rozvody vedou ve zdech a nejsou vidět. Rozhodují, co se stane, když uživatel klikne: co se spočítá, kam se co uloží, kdo smí co udělat. Sem patří i tajné věci, třeba klíče k cizím službám, schované v trezoru.',
-      ex:'Po odeslání přihlášky zkontrolují, jestli je ještě volné místo, a pošlou potvrzovací e-mail.',
+      ex:'Po odeslání přihlášky rozvody zkontrolují, jestli je ještě volné místo, a pošlou potvrzovací e-mail.',
       ask:'Vysvětli mi bez programátorských pojmů, co se stane, když uživatel klikne na [tlačítko]. Kudy data putují a kde skončí?',
       warn:'Jednoduché aplikace z chatu často žádné rozvody nemají a všechno běží na fasádě. Proto do nich nepatří klíče ani skutečná data.' },
     { id:'sklep', name:'Sklep', title:'Sklep: kde leží data', tag:'databáze',
@@ -581,7 +581,7 @@ ol.steps li.fix.now::before, ol.steps li.fix.done::before{background:var(--go); 
     document.querySelectorAll('.tl i').forEach(i => i.classList.toggle('on', i.classList.contains(lv)));
     let h;
     if (lv === 'g'){
-      h = '<h2>Zelená: stavějte a sdílejte</h2><p>Klikací prototyp, který nic neukládá a nikam nevolá. Ideální na testování s uživateli.</p><ul><li>Smyšlená data místo skutečných.</li><li>Nic tajného v kódu stránky.</li></ul>';
+      h = '<h2>Zelená: stavějte a sdílejte</h2><p>Klikací prototyp, který nic neukládá a nikam nevolá. Hodí se na testování s uživateli.</p><ul><li>Smyšlená data místo skutečných.</li><li>Nic tajného v kódu stránky.</li></ul>';
     } else if (lv === 'a'){
       const li = [];
       if (ans.data){ li.push('Jen smyšlená data, žádná skutečná jména ani e-maily.', 'Zeptejte se AI, kde data leží a kdo je uvidí.', 'Zamčený sklep: zabezpečení na úrovni řádků (Row Level Security).'); }
